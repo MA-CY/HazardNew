@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>側邊選單</title>
+    
+    <style type="text/css">
+        @import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap");
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-family: 'Noto Sans TC',sans-serif;
+        }
+        html,body{
+            height: 100%;    
+        }
+        body{
+            background-color: #546377;
+        }
+        .side-menu{
+            position: relative;
+            width: 300px;
+            height: 100%;
+            padding: 50px 0;
+            box-sizing: border-box;
+            background-image: linear-gradient(0deg,#3381b0,rgb(116, 163, 185));
+            display: flex;
+            flex-direction: column;
+            box-shadow: 5px 0px 10px hsla(240, 40%, 15%, .6);
+            transform: translateX(-100%);
+            transition: .3s;
+        }
+        .side-menu form{
+            display: flex;
+            margin: 0 10px 50px;
+            border-radius: 100px;
+            border: 1px solid rgb(255,255,255,.4);
+        }
+        .side-menu form input,
+        .side-menu form buttom{
+            border: none;
+            background-color: transparent;
+            color:#fff;
+            padding: 5px 10px;
+        }
+        .side-menu form input{
+             width: 230px;
+        }
+        .side-menu form buttom{
+            width: 50px;
+        }
+        .side-menu form input:focus,
+        .side-menu form buttom:focus{
+            outline:none;
+        }
+        .side-menu label{
+            position: absolute;
+            width: 40px;
+            height: 80px;
+            background-color: rgba(120, 211, 240, 0.3);
+            color:#fff;
+            right: -40px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            line-height: 80px;
+            text-align: center;
+            font-size: 30px;
+            border-radius: 0 10px 10px 0;
+            
+        }
+        #side-menu-switch{
+            position: absolute;
+            opacity: 0;
+            z-index: -1;
+            
+        }
+        #side-menu-switch:checked + .side-menu{
+            transform: translateX(0%);
+        }
+        nav a{
+            display: block;
+            padding: 10px;
+            color: #fff;
+            text-decoration:none ;
+            position: relative;
+        }
+        nav a + a::before{
+            content:'';
+            position: absolute;
+            border-top: 1px solid rgb(255,255,255,.4);
+            left: 10px;
+            right: 10px;
+            top: 0;
+
+        }
+        nav a:hover{
+            color: #000;
+        }
+        nav table{
+            margin: auto;
+        }
+        nav table button{
+            width: 65px;
+            text-align: center;
+            font-size: 10px;
+            border-radius: 5px 5px 5px 5px;
+            border: solid rgb(0,0,0,.6) 1px;
+            background-color: rgb(255,255,255,.5);
+        }
+    
+    </style>
+
+</head>
+<body>
+
+<input type="checkbox" name="" id="side-menu-switch">    
+
+<div class="side-menu">
+    <form>
+        <input type="search" placeholder="請輸入關鍵字">
+        <button>輸入</button>
+    </form>
+    <nav>
+        <form>
+            <select name="YourLocation">
+            　<option value="">location1</option>
+            　<option value="">location2</option>
+            　<option value="">location3</option>
+            　<option value="">location4</option>
+            </select>
+        </form>
+        <table>
+            <tr><h4>Measure</h4>
+                <td><button>Texture</button></td>
+                <td><button>Depth</button></td>
+                <td><button>phi</button></td>
+            </tr>
+            <tr>
+                <td><button>Dpo</button></td>
+                <td><button>Vs</button></td>
+                <td><button>Vf</button></td>
+            </tr>
+        </table>
+
+        <table>
+            <tr><h4>Texture</h4>
+                <td><button>Grass</button></td>
+                <td><button>Hillshade</button></td>
+                
+            </tr>
+            <tr>
+                <td><button>PreEvent</button></td>
+                <td><button>PostEvent</button></td>
+            </tr>
+        </table>
+        <a href="p01.html">練習1</a>
+        <a href="p02.html">練習2</a>
+        <a href="p03.html">練習3</a>
+        <a href="p04.html">練習4</a>
+        <a href="p05.html">練習5</a>
+        <a href="no013.html">6</a>
+    </nav>
+    <label for="side-menu-switch">
+        <i class="fa fa-check"></i>
+    </label>
+
+</div>
+
+
+
+</body>
+</html>
